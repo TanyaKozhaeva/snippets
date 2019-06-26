@@ -1,0 +1,69 @@
+.lapka {
+          transform-origin: 11% 59%;
+          animation: lapkaTest .4s linear 1.6s both; }
+.lapka-duplicate {
+  transform-origin: 11% 59%;
+  animation: lapkaDuplicate 1s linear .8s both, hidden .1s 1.8s both;
+}
+@keyframes lapkaDuplicate{
+  0%{
+    transform: rotate(-36deg);
+    opacity: 0;
+  }
+  70%{
+    opacity: 1;
+  }
+  100%{
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes hidden{
+  0%{
+opacity: 1;
+  }
+  100%{
+opacity: 0;
+  }
+}
+ 
+@keyframes lapkaTest{
+  0%{
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+  1%{
+    opacity: 1;
+  }
+  100%{
+    transform: rotate(-5deg);
+  }
+
+} 
+
+
+.monster {
+  transform-origin: bottom;
+  animation: show 2.5s cubic-bezier(0.42, 0, 0.32, 0.68) .8s both; }
+@keyframes show {
+  0% {
+    transform: translate(-32%, -10px) rotate(-10deg);}
+  100% {
+    transform: translate(0, 0) rotate(0); } }
+
+.lapka {
+          transform-origin: 11% 59%;
+          animation: lapkaShow .4s linear 1.6s both; }
+.lapka-duplicate {
+  display: none;
+  transform-origin: 11% 59%;
+  animation: lapkaDuplicate 1s linear .8s both, hidden .1s 1.8s both;
+}
+
+@keyframes lapkaShow {
+  0% {
+    -webkit-transform: scale(0.05);
+            transform: scale(0.05);}
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);} }
